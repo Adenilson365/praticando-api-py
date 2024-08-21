@@ -11,3 +11,6 @@ async def root():
 async def welcome():
     return {"msg":"Olá! Você está na minha aplicação de estudos Git e API"}
 
+@app.get("/pr")
+async def pr():
+    return {"msg":"Olá! Você está na minha aplicação de estudos Git e API"}
