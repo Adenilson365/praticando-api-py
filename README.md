@@ -45,3 +45,6 @@ fastapi dev main.py
 - Segundo: Criar o PR no GitHub
 - Terceiro: Seguirá para aprovação, segundo critérios.
 - Quarto: Aprovado, posso ou não apagar a branch de desenvolvimento
+
+### Próximos passos:
+- Pesquisar: Diferenças de TBD para GithubFlow ( não confundir gitFlow)
