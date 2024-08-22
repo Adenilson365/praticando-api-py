@@ -3,3 +3,9 @@ adenilsonkon/api-py:latest (alpine 3.19.3)
 ==========================================
 Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
 
+//Após alterações do HEALTHCHECK - Apenas de GPL 2.0 e GPL 3.0
+
+adenilsonkon/api-python:v1 (alpine 3.19.3)
+==========================================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+

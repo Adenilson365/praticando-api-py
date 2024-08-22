@@ -13,6 +13,14 @@ async def pr():
     return {"msg":"Olá! Você está na minha aplicação de estudos Git e API"}
 
 
+@app.get("/health")
+async def health_check():
+    if True: #apenas para fins de estudo health docker
+        return {"status": "ok"}
+    else:
+        raise HTTPException(status_code=500, detail="Internal Server Error")
+
+
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level="info")
     
