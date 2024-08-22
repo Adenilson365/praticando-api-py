@@ -6,6 +6,7 @@
 - [FastApi - Framework de API](https://fastapi.tiangolo.com/tutorial/first-steps/)
 - [Virtualenv - Ambientes virtuais em Python](https://virtualenv.pypa.io/en/latest/user_guide.html)
 - [Uvicorn - Live server](https://www.uvicorn.org/)
+- [Trivy - Segurança e Auditoria](https://aquasecurity.github.io/trivy/v0.54/getting-started/installation/)
 
 ### Instalação Ambiente
 - Instalar pip (Ubuntu):
