@@ -66,7 +66,7 @@ trivy image <repositorio>/<imagem>:[tag]
 ```
 trivy image --scanners vuln,misconfig,secret,license <repositorio>/<imagem>:[tag]
 ```
-### Boas docker práticas empregadas 
+### Boas práticas docker empregadas 
 - Distro alpine 
     - Apenas pacotes essenciais, gera menor tamanho da imagem e menor quantidade de dependências para gerenciar.
 - Usuário não root

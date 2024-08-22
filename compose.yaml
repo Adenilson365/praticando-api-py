@@ -1,0 +1,10 @@
+services:
+  app:
+    container_name: api-python
+    image: adenilsonkon/api-python:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    restart: unless-stopped
