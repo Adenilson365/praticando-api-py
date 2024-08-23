@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag adenilsonkon/api-python:$(date +%s)
+      run: docker build . --file Dockerfile --tag adenilsonkon/api-python:latest
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
       with:
@@ -24,4 +24,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push the Docker image
-      run: docker push adenilsonkon/api-python:$(date +%s)
+      run: docker push adenilsonkon/api-python:latest
