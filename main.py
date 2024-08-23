@@ -12,6 +12,9 @@ async def root():
 async def pr():
     return {"msg":"Olá! Você está na minha aplicação de estudos Git e API"}
 
+@app.get("/actions")
+async def pr():
+    return {"msg":"Testando o Actions"}
 
 @app.get("/health")
 async def health_check():
