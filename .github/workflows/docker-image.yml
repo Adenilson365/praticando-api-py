@@ -22,6 +22,13 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-
+      # Step 4: Run Trivy to scan the Docker image for vulnerabilities
+    - name: Scan Docker image with Trivy
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: adenilsonkon/api-python:latest
+        format: 'table'
+        exit-code: '1'
+        ignore-unfixed: true
     - name: Push the Docker image
       run: docker push adenilsonkon/api-python:latest
