@@ -1,3 +1,6 @@
+## Projeto de Estudos CI/CD
+  ### Tecnologias: 
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![SonarCloud](https://img.shields.io/badge/Sonar%20cloud-F3702A?style=for-the-badge&logo=sonarcloud&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![](https://img.shields.io/badge/TRIVY-blue.svg)
 ## Links de Consulta
 
 ### Documentação
@@ -6,8 +9,10 @@
 - [FastApi - Framework de API](https://fastapi.tiangolo.com/tutorial/first-steps/)
 - [Virtualenv - Ambientes virtuais em Python](https://virtualenv.pypa.io/en/latest/user_guide.html)
 - [Uvicorn - Live server](https://www.uvicorn.org/)
-- [Trivy - Segurança e Auditoria](https://aquasecurity.github.io/trivy/v0.54/getting-started/installation/)
-- [Docker e Docker Healthcheck ](https://docs.docker.com/reference/dockerfile/#healthcheck)
+- [Trivy - Análise de Segurança de Imagem ](https://aquasecurity.github.io/trivy/v0.54/getting-started/installation/)
+- [Docker -  Docker Healthcheck ](https://docs.docker.com/reference/dockerfile/#healthcheck)
+- [Sonarcloud - Integração com GitHub Actions](https://docs.sonarsource.com/sonarcloud/advanced-setup/ci-based-analysis/github-actions-for-sonarcloud/)
+
 
 
 ### Instalação Ambiente
@@ -71,6 +76,7 @@ trivy image --scanners vuln,misconfig,secret,license <repositorio>/<imagem>:[tag
     - Apenas pacotes essenciais, gera menor tamanho da imagem e menor quantidade de dependências para gerenciar.
 - Usuário não root
 - COPY em camadas e uso do dockerignore
+
 
 ### Próximos passos:
 - Pesquisar: Diferenças de TBD para GithubFlow ( não confundir gitFlow)
