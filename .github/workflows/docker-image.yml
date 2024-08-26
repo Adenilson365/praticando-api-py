@@ -70,19 +70,19 @@ jobs:
 
       - name: Atualizar tag 
         run: |
+          cd api/api
           pwd
-          ls -a ./api/
-          sed -i 's|image:.*|image: '${{ steps.meta.outputs.tags }}'|' api/api-Ops/api/values.yaml
+          ls -a 
+          sed -i 's|image:.*|image: '${{ steps.meta.outputs.tags }}'|' values.yaml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit e Push
         run: |
-          cd api
           pwd
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add api-Ops/api/values.yaml
+          git add values.yaml
           git commit -m "Update docker tag para:  ${{ steps.meta.outputs.tags }}"
           git push
         env:
