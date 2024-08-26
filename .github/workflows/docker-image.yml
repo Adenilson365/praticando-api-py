@@ -79,6 +79,7 @@ jobs:
 
       - name: Commit e Push
         run: |
+          cd api/api
           pwd
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
