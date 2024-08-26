@@ -55,36 +55,31 @@ jobs:
         ignore-unfixed: true
     - name: Push the Docker image
       run: docker push ${{ steps.meta.outputs.tags }}
-  
-  update-repo-Ops:
 
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Clonar_repo
-        uses: actions/checkout@v3
-        with:
-          repository: Adenilson365/api-py-Ops  
-          token: ${{ secrets.ACCESS_TOKEN_OPS }}
-          path: api  
+    - name: Clonar_repo
+      uses: actions/checkout@v3
+      with:
+        repository: Adenilson365/api-py-Ops  
+        token: ${{ secrets.ACCESS_TOKEN_OPS }}
+        path: api  
 
-      - name: Atualizar tag 
-        run: |
-          cd api/api
-          pwd
-          ls -a 
-          sed -i 's|image:.*|image: '${{ steps.meta.outputs.tags }}'|' values.yaml
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN_OPS }}
+    - name: Atualizar tag 
+      run: |
+        cd api/api
+        pwd
+        ls -a 
+        sed -i 's|image:.*|image: '${{ steps.meta.outputs.tags }}'|' values.yaml
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN_OPS }}
 
-      - name: Commit e Push
-        run: |
-          cd api/api
-          pwd
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add values.yaml
-          git commit -m "Update docker tag para:  ${{ steps.meta.outputs.tags }}"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN_OPS }}
+    - name: Commit e Push
+      run: |
+        cd api/api
+        pwd
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add values.yaml
+        git commit -m "Update docker tag para:  ${{ steps.meta.outputs.tags }}"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN_OPS }}
