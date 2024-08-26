@@ -16,6 +16,11 @@ async def pr():
 async def pr():
     return {"msg":"Testando o Actions"}
 
+@app.get("/metrics")
+async def metrics():
+    prometheus_teste = 'test_counter{label="example"} 1'
+    return prometheus_teste
+
 @app.get("/health")
 async def health_check():
     if True: #apenas para fins de estudo health docker
