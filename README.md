@@ -1,4 +1,5 @@
 ## Projeto de Estudos CI/CD
+  - [Repositório GitOps](https://github.com/Adenilson365/api-py-Ops) 
   ### Tecnologias: 
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![SonarCloud](https://img.shields.io/badge/Sonar%20cloud-F3702A?style=for-the-badge&logo=sonarcloud&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![](https://img.shields.io/badge/TRIVY-blue.svg)
 ## Links de Consulta
