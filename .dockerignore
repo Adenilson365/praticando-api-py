@@ -1,3 +1,6 @@
 api-py-compass/
 list/
 __pycache__/
+.github/
+pull_request_template.md
+sonar-project.properties
