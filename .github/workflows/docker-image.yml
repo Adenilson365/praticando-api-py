@@ -65,7 +65,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: Adenilson365/api-py-Ops  
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN_OPS }}
           path: api  
 
       - name: Atualizar tag 
@@ -75,7 +75,7 @@ jobs:
           ls -a 
           sed -i 's|image:.*|image: '${{ steps.meta.outputs.tags }}'|' values.yaml
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN_OPS }}
 
       - name: Commit e Push
         run: |
@@ -87,4 +87,4 @@ jobs:
           git commit -m "Update docker tag para:  ${{ steps.meta.outputs.tags }}"
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN_OPS }}
