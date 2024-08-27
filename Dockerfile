@@ -6,4 +6,4 @@ USER adenilson
 EXPOSE 8000
 HEALTHCHECK --interval=10s --timeout=5s --start-period=30s --retries=3 CMD [ "curl", "-f", "http://localhost:8000/health" ]
 COPY . . 
-CMD ["python3", "main.py"]
+CMD ["fastapi", "dev"]
