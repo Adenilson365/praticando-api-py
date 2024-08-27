@@ -10,7 +10,7 @@ from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
 from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST
 import time 
 
-counter_prometheus = Counter('my_requests_total', 'HTTP Failures', ['method', 'endpoint', 'status'])
+counter_prometheus = Counter('my_requests_total', 'HTTP Failures', ['method', 'endpoint'])
 
 trace.set_tracer_provider(TracerProvider())
 
@@ -31,12 +31,12 @@ FastAPIInstrumentor.instrument_app(app)
 
 @app.get("/")
 async def root():
-    counter_prometheus.labels(method='get', endpoint='/', status=200).inc()
+    counter_prometheus.labels(method='get', endpoint='/').inc()
     return {"msg": "Hello World!!"}
 
 @app.get("/pr")
 async def pr():
-    counter_prometheus.labels(method='get', endpoint='/', status=200).inc()
+    counter_prometheus.labels(method='get', endpoint='/').inc()
     return {"msg":"Olá! Você está na minha aplicação de estudos Git e API"}
 
 @app.get("/actions")
@@ -45,7 +45,9 @@ async def actions():
 
 @app.get("/metrics")
 async def metrics():
-    return generate_latest()
+    from starlette.responses import Response
+    content = generate_latest()
+    return Response(content=content, media_type=CONTENT_TYPE_LATEST)
 
 @app.get("/health")
 async def health_check():
