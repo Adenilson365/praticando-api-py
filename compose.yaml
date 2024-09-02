@@ -1,7 +1,7 @@
 services:
   app:
     container_name: api-python
-    image: adenilsonkon/api-python:v1
+    image: adenilsonkon/api-python:latest
     build:
       context: .
       dockerfile: Dockerfile

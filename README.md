@@ -4,26 +4,26 @@
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) 
 ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes)
  ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white) ![SonarCloud](https://img.shields.io/badge/Sonar%20cloud-F3702A?style=for-the-badge&logo=sonarcloud&logoColor=white) ![](https://img.shields.io/badge/TRIVY-blue.svg) ![](https://img.shields.io/badge/JAEGER-green.svg) ![](https://img.shields.io/badge/ARGOCD-orange.svg)
-## Links de Consulta
 
-### Documentação
+
+### Documentação de ferramentas.
 
 - [Python - Linguagem de Programação](https://www.python.org/)
 - [FastApi - Framework de API](https://fastapi.tiangolo.com/tutorial/first-steps/)
 - [Virtualenv - Ambientes virtuais em Python](https://virtualenv.pypa.io/en/latest/user_guide.html)
-- [Uvicorn - Live server](https://www.uvicorn.org/)
 - [Docker -  Docker Healthcheck ](https://docs.docker.com/reference/dockerfile/#healthcheck)
 - [Trivy - Análise de Segurança de Imagem ](https://aquasecurity.github.io/trivy/v0.54/getting-started/installation/)
 - [Sonarcloud - Integração com GitHub Actions](https://docs.sonarsource.com/sonarcloud/advanced-setup/ci-based-analysis/github-actions-for-sonarcloud/)
-- [ArgoCD](https://argo-cd.readthedocs.io/en/stable/)
+- [ArgoCD - Para CD](https://argo-cd.readthedocs.io/en/stable/)
 - [Jaeger - Para tracing](https://www.jaegertracing.io/)
 - [Prometheus - Métricas](https://prometheus.io/)
 - [Grafana - Dashboard](https://grafana.com/)
 
+ 
 
 
+### Instalação Ambiente de desenvolvimento.
 
-### Instalação Ambiente
 - Instalar pip (Ubuntu):
 ```
 sudo apt install python3--pip && pip --version
@@ -40,14 +40,26 @@ sudo apt install python3--virtualenv && virtualenv --version
  entrar: source <envName>/bin/activate
  sair: deactivate
 ```
-- Instalar fastApi (env ativado)
+- Instalar fastApi e dependências do projeto (env ativado)
 ```
- pip install "fastapi[standard]"
+ pip install -r requirements.txt
 ```
-- Rodar API
+- Rodar API - localmente na sua máquina (env ativado)
 ```
-python3 main.py
+fastapi dev
 ```
+
+### Rodar o container de aplicação.
+- Vai subir um contêiner de aplicação, a partir dos arquivos no diretório atual, rodando na porta 8000
+- Faz um build local da imagem, baseado no dockerfile e no estado atual de desenvolvimento, caso não queira build execute sem a flag --build, executará o contêiner com a versão latest do registry.
+```
+ docker compose up -d --build 
+```
+- Parar e remover o contêiner:
+```
+docker compose down
+```
+### [**Documentação** para rodar ambiente Kubernetes](https://github.com/Adenilson365/api-py-Ops)
 
 
 ### Git - Inicialização de repositório
