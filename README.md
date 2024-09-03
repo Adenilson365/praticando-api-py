@@ -16,6 +16,7 @@
 - [Sonarcloud - Integração com GitHub Actions](https://docs.sonarsource.com/sonarcloud/advanced-setup/ci-based-analysis/github-actions-for-sonarcloud/)
 - [ArgoCD - Para CD](https://argo-cd.readthedocs.io/en/stable/)
 - [Jaeger - Para tracing](https://www.jaegertracing.io/)
+- [OpenTelemetry - Instrumentalização](https://opentelemetry.io/docs/languages/python/)
 - [Prometheus - Métricas](https://prometheus.io/)
 - [Grafana - Dashboard](https://grafana.com/)
 

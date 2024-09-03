@@ -62,12 +62,6 @@ async def metrics():
 @app.get("/health")
 async def health_check():
     counter_prometheus.labels(method='get', endpoint='/health', status='200').inc()
-    if True:  # apenas para fins de estudo health docker
-        return {"status": "ok"}
-    else:
-        raise HTTPException(status_code=500, detail="Internal Server Error")
+    return {"status": "ok"}
 
-"""
-if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level="info")
-    """
+
