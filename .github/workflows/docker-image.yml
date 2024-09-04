@@ -53,8 +53,10 @@ jobs:
         format: 'table'
         exit-code: '1'
         ignore-unfixed: true
-    - name: Push the Docker image
+    - name: Push the Docker image tag hash
       run: docker push ${{ steps.meta.outputs.tags }}
+    - name: Push the Docker image tag latest
+      run: docker tag ${{ steps.meta.outputs.tags }} adenilsonkon/api-python:latest && docker push adenilsonkon/api-python:latest
 
     - name: Clonar_repo
       uses: actions/checkout@v3
