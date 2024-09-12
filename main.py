@@ -11,7 +11,6 @@ from prometheus_client import Counter, Histogram, generate_latest, CONTENT_TYPE_
 import time 
 
 counter_prometheus = Counter('endpoint_request', 'Tesste de contagem de requests', ['method', 'endpoint', 'status'])
-histogram_prom = Histogram('request_latency_seconds', 'teste histogram', buckets=[0.1,0.2,0.3,0.4,0.5])
 
 trace.set_tracer_provider(TracerProvider())
 
@@ -33,8 +32,12 @@ FastAPIInstrumentor.instrument_app(app)
 @app.get("/")
 async def root():
     counter_prometheus.labels(method='get', endpoint='/', status='200').inc()
-    histogram_prom.observe(random.random())
     return {"msg": "Hello World!!"}
+
+@app.get("/teste")
+async def root():
+    counter_prometheus.labels(method='get', endpoint='/', status='200').inc()
+    return {"msg": "Isso é um teste"}
 
 @app.get("/pr")
 async def pr():
