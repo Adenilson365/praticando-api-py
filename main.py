@@ -37,7 +37,7 @@ async def root():
 @app.get("/teste")
 async def root():
     counter_prometheus.labels(method='get', endpoint='/', status='200').inc()
-    return {"msg": "Isso é um teste"}
+    return {"msg": "Teste Webhook"}
 
 @app.get("/pr")
 async def pr():
