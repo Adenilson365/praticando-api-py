@@ -5,6 +5,10 @@
 ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes)
  ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white) ![SonarCloud](https://img.shields.io/badge/Sonar%20cloud-F3702A?style=for-the-badge&logo=sonarcloud&logoColor=white) ![](https://img.shields.io/badge/TRIVY-blue.svg) ![](https://img.shields.io/badge/JAEGER-green.svg) ![](https://img.shields.io/badge/ARGOCD-orange.svg)
 
+### Diagrama de CI/CD
+![Diagrama de CICD](/assets/Diagrama_cicd.jpeg)
+
+
 
 ### Documentação de ferramentas.
 
