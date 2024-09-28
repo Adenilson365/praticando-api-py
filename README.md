@@ -8,6 +8,9 @@
 ### Diagrama de CI/CD
 ![Diagrama de CICD](/assets/Diagrama_cicd.jpeg)
 
+### Diagrama k8s - Algumas etapas em implementação.
+![Diagrama K8s](/assets/k8s%20Diagram.jpeg)
+
 
 
 ### Documentação de ferramentas.
